@@ -56,7 +56,8 @@ export const CartContextProvider = (props: Props) => {
                 setCartTotalAmount(total);
             }
         }
-    }, [])
+        getTotals()
+    }, [cartProducts])
         
     
 
@@ -118,7 +119,7 @@ export const CartContextProvider = (props: Props) => {
         if(cartProducts) 
         {
             updatedCart = [...cartProducts];
-            const existingIndex = cartProducts.findIndex((item) => item && item.id === product.id);
+            const existingIndex = cartProducts.findIndex((item) => item.id === product.id);
 
             if(existingIndex > -1) {
                 updatedCart[existingIndex].quantity = --updatedCart[existingIndex].quantity; 
