@@ -39,7 +39,7 @@ return (
             <div className="col-span-2 justify-self-start">PRODUCT</div>
             <div className="justify-self-center">PRICE</div>
             <div className="justify-self-center">QUALITY</div>
-            <div className="justify-self-">TOTAL</div>
+            <div className="justify-self-end">TOTAL</div>
         </div>
         <div>
             {cartProducts && cartProducts.map((item) => {
