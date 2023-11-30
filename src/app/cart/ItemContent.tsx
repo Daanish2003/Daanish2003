@@ -1,10 +1,10 @@
 import Link from "next/link"
-import { formatPrice } from "../../../utils/formatPrice"
+import { formatPrice } from "../../utils/formatPrice"
 import { CartProductType } from "../product/[productId]/ProductDetails"
-import { truncateText } from "../../../utils/truncateText"
+import { truncateText } from "../../utils/truncateText"
 import Image from "next/image"
 import SetQuantity from "../components/products/setQuantity"
-import { useCart } from "../../../hooks/useCart"
+import { useCart } from "../../hooks/useCart"
 
 interface ItemContentProps  {
     item: CartProductType

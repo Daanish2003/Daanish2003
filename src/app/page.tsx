@@ -1,8 +1,8 @@
 import React from 'react';
 import HomeBanner from './components/HomeBanner';
 import Container from './components/Container';
-import { products } from '../../utils/Products';
-import { truncateText } from '../../utils/truncateText';
+import { products } from '../utils/Products';
+import { truncateText } from '../utils/truncateText';
 import ProductCard from './components/products/ProductCard';
 
 

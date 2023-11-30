@@ -43,14 +43,14 @@ export const CartContextProvider = (props: Props) => {
             if(cartProducts){
                 const { total, qty } = cartProducts?.reduce(
                     (acc, item) => {
-                    const itemTotal = item.price * item.quantity
+                    const itemTotal = item.price * item.quantity;
 
-                    acc.total += itemTotal
-                    acc.qty += item.quantity
+                    acc.total += itemTotal;
+                    acc.qty += item.quantity;
                     return acc;
                 }, {
                     total: 0,
-                    qty: 0 
+                    qty: 0,
                 })
                 setCartTotalQty(qty);
                 setCartTotalAmount(total);
@@ -76,7 +76,7 @@ export const CartContextProvider = (props: Props) => {
 
         return updatedCart;
     });
-    }, []);
+    }, [cartProducts]);
 
     const handleRemoveProductFromCart = useCallback((
         product: CartProductType
@@ -109,7 +109,7 @@ export const CartContextProvider = (props: Props) => {
             setCartProducts(updatedCart);
             localStorage.setItem("eShopCartItems", JSON.stringify(updatedCart));
         }
-    }, []);
+    }, [cartProducts]);
 
     const handleCartQtyDecrease = useCallback((product: CartProductType) => {
         let updatedCart;
@@ -128,7 +128,7 @@ export const CartContextProvider = (props: Props) => {
             setCartProducts(updatedCart);
             localStorage.setItem("eShopCartItems", JSON.stringify(updatedCart));
         }
-    }, []);
+    }, [cartProducts]);
 
     const handleClearCart = useCallback((
         

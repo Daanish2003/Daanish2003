@@ -2,7 +2,7 @@ import Container from "@/app/components/Container";
 
 import ProductDetails from "./ProductDetails";
 import ListRating from "./ListRating";
-import { products } from "../../../../utils/Products";
+import { products } from "../../../utils/Products";
 
 interface Iprams {
     productId?: string;

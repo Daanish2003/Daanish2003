@@ -3,8 +3,9 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import Navbar from './components/nav/Navbar';
 import Footer from './components/footer/Footer';
-import CartProvider from '../../providers/CartProviders';
+import CartProvider from '../providers/CartProviders';
 import { Toaster } from 'react-hot-toast';
+import { getCurrentUser } from '@/actions/getCurrentUser';
 
 const poppins = Poppins({ subsets: ['latin'] , weight: ['400', '700'] })
 
@@ -13,11 +14,15 @@ export const metadata: Metadata = {
   description: 'E-commerce website for buying products',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+
+
+
+
   return (
     <html lang="en">
       <body className={`${poppins.className} text-slate-700`}>

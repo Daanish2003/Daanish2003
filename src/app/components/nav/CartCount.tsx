@@ -3,7 +3,7 @@
 
 import { useRouter } from 'next/navigation'
 import React from 'react'
-import { useCart } from '../../../../hooks/useCart';
+import { useCart } from '../../../hooks/useCart';
 import { CiShoppingCart } from "react-icons/ci";
 
 
